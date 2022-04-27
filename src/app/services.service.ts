@@ -47,9 +47,9 @@ export class Services {
     // return this._http.get(`https://api.github.com/users`) 
   
 
-    getProfile(){
+    getProfile<T>(url:string){
       
-      return this._http.get(`https://api.github.com/users/`+ this.userName +
+      return this._http.get<T>(`https://api.github.com/users/`+ this.userName +
       "?client_id=" + this.clientID + 
       "&client_secret="+ this.clientSecret)
   

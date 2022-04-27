@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 import { HomePage } from './home/home.page';
 import { ProfilePage } from './profile/profile.page';
+import { FormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { ProfilePage } from './profile/profile.page';
     IonicModule.forRoot(), 
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
     
    
   ],

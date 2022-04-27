@@ -8,14 +8,18 @@ import { Services } from '../services.service';
 })
 export class ProfilePage implements OnInit {
 
-  getprofile=[]
-  
+ setProfile;
+
+
 
   constructor(private _services:Services ) { 
     
-    this._services.getProfile().subscribe(profile => {
-   
-      console.log(profile)
+    this._services.getProfile('').subscribe(profile => {
+      
+    
+      
+      this.setProfile = profile
+      console.log(this.setProfile)
     })
   }
 

@@ -9,13 +9,15 @@ import { Services } from '../services.service';
 })
 export class HomePage {
 
-  getdata=[];
+  getdata;
 
   constructor(private _services: Services) {
 
     this._services.getData('').subscribe(data => {
       this.getdata = data 
       console.log(data)
+
+      
       
     })
   }
