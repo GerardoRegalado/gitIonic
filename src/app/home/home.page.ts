@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Services } from '../services.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +9,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  getdata=[];
+
+  constructor(public _services: Services) {
+
+    this._services.getData('').subscribe(data => {
+      this.getdata= data
+      console.log(this.getdata)
+    })
+  }
 
 }
