@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header  [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      gitIonic
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,14 @@
 <ion-content [fullscreen]="true">
   <ion-list>
 
-    <ion-item *ngFor="let data of getdata">
-      {{data.id}} {{data.login}}
-    </ion-item>
+    <ion-item  *ngFor="let data of getdata">
+      <img class="image"  src="{{data.avatar_url}}" alt="">
+      <span>{{data.id}}{{data.login}} </span>
+
+
+      
+      <hr >
+    </ion-item >
     
   </ion-list>
 </ion-content>

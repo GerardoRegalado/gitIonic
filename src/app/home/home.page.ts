@@ -11,11 +11,12 @@ export class HomePage {
 
   getdata=[];
 
-  constructor(public _services: Services) {
+  constructor(private _services: Services) {
 
     this._services.getData('').subscribe(data => {
-      this.getdata= data
-      console.log(this.getdata)
+      this.getdata = data 
+      console.log(data)
+      
     })
   }
 

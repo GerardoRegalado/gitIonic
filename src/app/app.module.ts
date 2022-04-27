@@ -10,6 +10,9 @@ import { AppRoutingModule } from './app-routing.module';
 // para utilizar los status de http se tiene que importar HttpClientModule, posteriormente
 // es necesario colocar todas las importaciones en el apartado imports
 import { HttpClientModule } from '@angular/common/http'
+import { HomePage } from './home/home.page';
+import { ProfilePage } from './profile/profile.page';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,11 +21,15 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
+   
   ],
   providers: [{ 
     provide: RouteReuseStrategy, 
-    useClass: IonicRouteStrategy }],
+    useClass: IonicRouteStrategy,
+ 
+  }],
   
   bootstrap: [AppComponent],
 })
