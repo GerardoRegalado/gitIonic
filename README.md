@@ -27,6 +27,8 @@
             <p>Location<strong style="color:green"> Done</strong></p> 
             <p>Website/blog<strong style="color:green"> Done</strong></p> 
             <p>More than two publics repos<strong style="color:green"> Done</strong></p> 
+            
+            <img src="/src/assets/profile.png" alt="">
         </li>
 
     </ul>
