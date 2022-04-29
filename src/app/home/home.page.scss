@@ -1,11 +1,40 @@
 
-
-hr {
- background-color: var(--ion-color-warning);
-}
-
 .image{
   width: 50px;
   height: 50px;
   border-radius: 190px;
+}
+
+.headerlogo{
+
+  width: 50%;
+  height: 50%;
+  margin-top: 2%;
+  padding: 0;
+
+}
+
+ion-icon {
+    color: #ec8f27;
+    position: absolute;
+    margin-left: 9rem;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+
+.input-wrapper{
+
+  width: auto;
+  height: 40px;
+  align-items: center;
+  padding: 2px 2px 0 2px;
+
+ 
+
+}
+
+.ion-padding{
+
+  padding: 15px;
 }

@@ -1,5 +1,13 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+
+import { Injectable } from '@angular/core';
+
+
+import { HomePage } from './home/home.page';
+import { ProfilePage } from './profile/profile.page';
+
+
 
 const routes: Routes = [
   {
@@ -12,7 +20,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'profile',
+    path: 'home/:profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
 ];
@@ -24,3 +32,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const appRoutingProviders: any[] =[];
+export const routing = RouterModule.forRoot(routes)

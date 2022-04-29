@@ -1,16 +1,62 @@
-<ion-header>
+<ion-header  [translucent]="true">
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>
+      <div>
+        <img class="headerlogo" src="../../assets/logo.png">
+        <ion-icon  name="grid-outline"></ion-icon>
+      </div>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item *ngIf="setProfile">
-    <img width="80px" height="80px" src={{setProfile.avatar_url}} alt="profilephoto">
-    <span>{{setProfile.name}}</span><br>
-    <p>{{setProfile.bio}}</p><br>
-    <p>{{setProfile.company}}</p><br>
-    <p>{{setProfile.location}}</p><br>
-    <p>{{setProfile.blog}}</p><br>
+<ion-content >
+  <ion-item *ngIf="setProfile" >
+    <img 
+
+    style="margin: 1rem 0 1rem 35%;" 
+    width="120px" 
+    height="120px" src={{setProfile.avatar_url}} 
+    alt="profilephoto">
   </ion-item>
+  <ion-item *ngIf="setProfile">
+    <h1 
+    style=" margin-left: 5%; width: 100%; text-align: left; text-decoration: underline solid whitesmoke;">
+    Username: {{setProfile.login}}
+  </h1>
+  </ion-item>
+  <ion-item *ngIf="setProfile">
+  <div>
+  <p  style="width: 100%; text-align: left; margin-left: 20%;">Complete name: {{setProfile.name}}</p>
+  </div>
+  </ion-item>
+  <ion-item *ngIf="setProfile">
+    <p style="text-align: center;">{{setProfile.bio}}</p>
+
+  </ion-item>
+
+<ion-item  style="text-align: center; border: 2px solid gray;" *ngIf="setProfile">
+  
+  
+  <span style="margin-left: 1rem;"><strong>Followers:</strong> {{setProfile.followers}}</span>
+  <span style="margin-left: 1rem;"><strong>Following:</strong> {{setProfile.following}}</span>
+  <span [style.color]="setProfile.public_repos >=2 ? 'red': 'white'" style="margin-left: 1rem;"><strong>Public Repos:</strong> {{setProfile.public_repos}}</span>
+ 
+
+</ion-item>
+<ion-item style="text-align: left;"  *ngIf="setProfile">
+  
+  <ion-icon name="briefcase-outline"></ion-icon> <span style="margin-left: 10px;" [textContent]="setProfile.company ===!null ? '`${setProfile.company}`': 'No company'"> Company: {{setProfile.company}}</span>
+
+</ion-item>
+
+<ion-item style="text-align: left;"  *ngIf="setProfile">
+  <ion-icon name="compass-outline"></ion-icon> <span style="margin-left: 10px;"> Location: {{setProfile.location}}</span>
+   
+</ion-item>
+
+<ion-item  style="text-align: left; width: 100%;"  *ngIf="setProfile">
+  <ion-icon name="laptop-outline"></ion-icon> <span style="margin-left: 10px;"> blog: {{setProfile.blog}}</span>
+</ion-item>
+
+  
 </ion-content>

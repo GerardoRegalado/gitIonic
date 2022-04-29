@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-
+import { routing , appRoutingProviders} from './app-routing.module'
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,15 +23,18 @@ import { FormsModule } from '@angular/forms'
     IonicModule.forRoot(), 
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IonicModule,
+    routing
     
    
   ],
   providers: [{ 
     provide: RouteReuseStrategy, 
     useClass: IonicRouteStrategy,
+    
  
-  }],
+  },appRoutingProviders],
   
   bootstrap: [AppComponent],
 })
